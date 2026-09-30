@@ -4,7 +4,7 @@
 - Gemini
 
 ## Conversations
-[Nu există link de share direct, dar conversația a acoperit modelul de date, HTML și CSS Grid/Flexbox]
+https://share.gemini.google/KniQzVYKEyUo
 
 ## Key requests
 ### 1. Adaptarea temei și generarea codului
