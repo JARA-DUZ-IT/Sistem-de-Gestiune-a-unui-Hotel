@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>HotelFlow - mockup</title>
+ <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="app-header">
+ <h1>HotelFlow</h1>
+ <p>Gestionează check-in-urile și tipurile de camere.</p>
+ <p class="app-count">3 rezervări, dintre care 2 în așteptare</p>
+ </header>
+ <main class="container">
+ <section class="panel">
+ <h2>Adaugă rezervare</h2>
+ <form class="item-form">
+ <label>Nume oaspete și cameră 
+    <input type="text" name="titlu" placeholder="Ex: Alice Smith - Cam. 101" />
+ </label>
+ <label>Tip cameră
+ <select name="eticheta">
+ <option value="single">Single</option>
+ <option value="double">Double</option>
+ <option value="suite">Suite</option>
+ </select>
+ </label>
+ <button type="submit">Adaugă</button>
+ </form>
+ </section>
+ <section class="panel">
+ <h2>Lista rezervărilor</h2>
+ <!-- Când lista e goală: <p class="empty">Nu există nicio rezervare.</p> -->
+ <ul class="item-list">
+ <li class="item-card">
+ <div>
+ <h3>Alice Smith - Cam. 101</h3>
+ <span class="badge badge-single">Single</span>
+ </div>
+ <span class="status">În așteptare</span>
+ </li>
+ <li class="item-card done">
+ <div>
+ <h3>Bob Johnson - Cam. 205</h3>
+ <span class="badge badge-double">Double</span>
+ </div>
+ <span class="status">Check-in efectuat</span>
+ </li>
+ <li class="item-card">
+ <div>
+ <h3>Charlie Brown - Cam. 301</h3>
+ <span class="badge badge-suite">Suite</span>
+ </div>
+ <span class="status">În așteptare</span>
+ </li>
+ </ul>
+ </section>
+ </main>
+ <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>
