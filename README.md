@@ -42,10 +42,10 @@ Details per stage: see the ai-log/ folder.
 | S1-R6 | 2 columns on desktop, 1 under 700px | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/35b6764700aad60f01c14f71879c8aeda4a84881/style.css#L145-L150 | resize < 700px |
 | S1-R7 | visible focus, readable dark theme | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/35b6764700aad60f01c14f71879c8aeda4a84881/style.css#L140-L161 | Tab; dark mode |
 | S1-R8 | commit “Stage 1” pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
-| S2-R1 | JS file linked, logs on page load | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/index.html#L58 | open page, F12 |
-| S2-R2 | 3+ items with id, name, state, tag | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/rezervari.js#L1-L5 | read |
-| S2-R3 | list, count, search, add, toggle, delete | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/rezervari.js#L9-L56 | console output |
-| S2-R4 | add rejects empty name and invalid tag | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/rezervari.js#L75-L76 | last 2 console lines |
-| S2-R5 | original array unchanged after add | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/rezervari.js#L66 | console line |
+| S2-R1 | JS file linked, logs on page load | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L58 | open page, F12 |
+| S2-R2 | 3+ items with id, name, state, tag | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L5 | read |
+| S2-R3 | list, count, search, add, toggle, delete | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L76 | console output |
+| S2-R4 | add rejects empty name and invalid tag | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#74-L76 | last 2 console lines |
+| S2-R5 | original array unchanged after add | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L76 | console line |
 | S2-R6 | README Stage 2 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
 | S2-R7 | commit "Stage 2" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
