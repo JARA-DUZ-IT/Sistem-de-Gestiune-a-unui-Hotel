@@ -23,13 +23,23 @@ Open `index.html` in a browser. No build step, no server.
 | Tool | Used for |
 | -------------- | ----------------------------------------- |
 | Gemini | Stage 1: Brainstorming data model, generating README and HTML/CSS structures. |
-| Gemini | Stage 2: Generating the JavaScript array, pure functions (map, filter, reduce), and console tests. |
+| Gemini | Stage 2: Generating the JavaScript array, pure functions (map, filter, reduce), and console tests. |.
+| Gemini | Stage 3: Generating React component, adapting CSS for Vite, fixing PowerShell execution policies, and Vite setup. |
 Details per stage: see the ai-log/ folder.
 
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
-- [ ] Stage 3: Vite and React project
+- [x] Stage 3: Vite and React project
+
+## Stage 3: Vite and React project
+The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## How to run
+cd frontend
+npm install
+npm run dev
+Then open the address printed in the terminal (http://localhost:5173).
 
 ## Checklist
 | ID | Requirement | Where (permalink) | How to check |
@@ -49,3 +59,10 @@ Details per stage: see the ai-log/ folder.
 | S2-R5 | original array unchanged after add | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L76 | console line |
 | S2-R6 | README Stage 2 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
 | S2-R7 | commit "Stage 2" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
+| S3-R1 | npm run dev starts without errors | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/package.json | npm install, npm run dev |
+| S3-R2 | app name and counter computed from data | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/src/App.jsx#L10-L15 | edit data, save |
+| S3-R3 | data from README, not from the example | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/src/App.jsx#L3-L7 | compare with README |
+| S3-R4 | stage 1 styles reused | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/src/App.css | look at the page |
+| S3-R5 | node_modules ignored, build passes | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/.gitignore | npm run build |
+| S3-R6 | README Stage 3 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/README.md | read |
+| S3-R7 | commit "Stage 3" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
