@@ -25,15 +25,23 @@ Open `index.html` in a browser. No build step, no server.
 | Gemini | Stage 1: Brainstorming data model, generating README and HTML/CSS structures. |
 | Gemini | Stage 2: Generating the JavaScript array, pure functions (map, filter, reduce), and console tests. |.
 | Gemini | Stage 3: Generating React component, adapting CSS for Vite, fixing PowerShell execution policies, and Vite setup. |
+| Gemini | Stage 4: Splitting the UI into React components, passing props, and conditional rendering based on state. |
 Details per stage: see the ai-log/ folder.
 
 ## Status
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
+- [x] Stage 4: components rendered from data
+- [ ] Stage 5: local state and events
 
 ## Stage 3: Vite and React project
 The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
+
+## Stage 4: components
+The list is rendered from the data, through two components:
+- `RezervareList` receives the whole array and renders one card per item.
+- `RezervareCard` receives a single item through props and displays it.
 
 ## How to run
 cd frontend
@@ -66,3 +74,10 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S3-R5 | node_modules ignored, build passes | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/frontend/.gitignore | npm run build |
 | S3-R6 | README Stage 3 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/<hash-commit>/README.md | read |
 | S3-R7 | commit "Stage 3" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
+| S4-R1 | 2+ components in src/components/ | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/tree/main/frontend/src/components | open folder |
+| S4-R2 | card receives data through props | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/frontend/src/components/RezervareCard.jsx#L3 | read |
+| S4-R3 | map + key={id}, no console warnings | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/frontend/src/components/RezervareList.jsx#L10-L12 | F12, Console |
+| S4-R4 | message for empty list | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/frontend/src/components/RezervareList.jsx#L4-L6 | set array to [] |
+| S4-R5 | state changes the card look | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/frontend/src/components/RezervareCard.jsx#L5 | toggle a done flag |
+| S4-R6 | README Stage 4 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
+| S4-R7 | commit "Stage 4" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |

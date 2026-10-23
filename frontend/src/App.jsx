@@ -1,9 +1,10 @@
 import "./App.css";
+import RezervareList from "./components/RezervareList.jsx";
 
 const rezervari = [
   { id: 1, titlu: "Alice Smith - Cam. 101", efectuat: false, tip: "single" },
   { id: 2, titlu: "Bob Johnson - Cam. 205", efectuat: true, tip: "double" },
-  { id: 3, titlu: "Charlie Brown - Cam. 301", efectuat: false, tip: "suite" }
+ { id: 3, titlu: "Charlie Brown - Cam. 301", efectuat: false, tip: "suite" }
 ];
 
 export default function App() {
@@ -21,8 +22,7 @@ export default function App() {
       <main className="container">
         <section className="panel">
           <h2>Lista rezervărilor</h2>
-          {/* Temporar: date brute; componentele apar in Etapa 4 */}
-          <pre>{JSON.stringify(rezervari, null, 2)}</pre>
+          <RezervareList rezervari={rezervari} />
         </section>
       </main>
     </>
