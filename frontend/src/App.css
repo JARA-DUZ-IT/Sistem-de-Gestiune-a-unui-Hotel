@@ -1,18 +1,43 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 :root {
-  /* Baza întunecată profundă */
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #1a1c23;
+  --muted: #6c7693;
+  --accent: #00939b;
+  --accent-soft: rgba(0, 147, 155, 0.15);
+  --border: rgba(0, 147, 155, 0.3);
+  --c-single: #2da812;
+  --c-double: #b300a4;
+  --c-suite: #d4c300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #090a0f;
+    --card: #12141c;
+    --text: #e0e6ed;
+    --muted: #6c7693;
+    --accent: #00f3ff;
+    --accent-soft: rgba(0, 243, 255, 0.15);
+    --border: rgba(0, 243, 255, 0.3);
+    --c-single: #39ff14;
+    --c-double: #ff00ea;
+    --c-suite: #ffea00;
+  }
+}
+
+:root[data-theme="dark"] {
   --bg: #090a0f;
   --card: #12141c;
   --text: #e0e6ed;
   --muted: #6c7693;
-  
-  /* Accente Neon (Cyan vibe) */
   --accent: #00f3ff;
   --accent-soft: rgba(0, 243, 255, 0.15);
   --border: rgba(0, 243, 255, 0.3);
-  
-  /* Culori Neon radiante pentru tipurile de camere */
   --c-single: #39ff14;
   --c-double: #ff00ea;
   --c-suite: #ffea00;
@@ -27,6 +52,7 @@ body {
 }
 
 .app-header {
+  position: relative;
   background-color: var(--bg);
   color: var(--accent);
   text-align: center;
@@ -48,22 +74,12 @@ body {
   color: var(--muted);
 }
 
-/* Structura modificată pentru Etapa 3: doar panoul cu date */
 .container {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 16px;
-  display: block; 
-  /* flex-direction: row-reverse; - comentat temporar */
-  /* gap: 30px; */
-  /* align-items: flex-start; */
+  display: block;
 }
-
-/* Lățimile panourilor sunt comentate temporar; formularul revine in Etapa 7 */
-/*
-.container > .panel:nth-child(1) { flex: 1; }
-.container > .panel:nth-child(2) { flex: 1.8; }
-*/
 
 .panel {
   background: var(--card);
@@ -88,4 +104,53 @@ pre {
   color: var(--text);
   font-family: monospace;
   font-size: 1rem;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-soft);
+}
+
+.rezervare-main {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.rezervare-main input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.btn-danger {
+  border: 1px solid var(--c-double);
+  background: transparent;
+  color: var(--c-double);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-danger:hover {
+  background: var(--c-double);
+  color: #fff;
 }
