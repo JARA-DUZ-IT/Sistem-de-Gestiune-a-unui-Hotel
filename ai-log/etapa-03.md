@@ -1,7 +1,7 @@
 # Stage 3: AI log
 
 ## Tools
-- Gemini
+- Google Gemini
 
 ## Conversations
 https://share.gemini.google/U2IYeu8XDC7x

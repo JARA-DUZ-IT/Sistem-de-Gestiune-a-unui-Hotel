@@ -1,7 +1,7 @@
 # Stage 2: Data logic (JavaScript)
 
 ## Tools used
-* **Tool:** Gemini
+* **Tools:** Google Gemini
 * **Used for:** Generating the `rezervari.js` file with immutable functions (using map, filter, reduce methods), creating console tests, updating `index.html`, completing `README.md`, and assisting with Git commands.
 
 ## Conversation and Prompts

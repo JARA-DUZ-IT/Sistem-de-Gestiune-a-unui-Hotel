@@ -33,7 +33,8 @@ Details per stage: see the ai-log/ folder.
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
-- [ ] Stage 5: local state and events
+- [x] Stage 5: local state and events
+- [ ] Stage 6: loading data from a mock API
 
 ## Stage 3: Vite and React project
 The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
@@ -81,3 +82,11 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S4-R5 | state changes the card look | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/components/RezervareCard.jsx#L5 | toggle a done flag |
 | S4-R6 | README Stage 4 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
 | S4-R7 | commit "Stage 4" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
+| S5-R1 | list kept in useState, in App | App.jsx#L... | read |
+| S5-R2 | toggling changes state and card look | App.jsx#L...<br>RezervareCard.jsx#L... | click a checkbox |
+| S5-R3 | delete removes the item | App.jsx#L...<br>RezervareCard.jsx#L... | click Delete |
+| S5-R4 | header counter derived, not in state | App.jsx#L... | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice, assignment) | App.jsx#L... | read |
+| S5-R6 | light/dark toggle: state + data-theme on html | App.jsx#L...<br>App.css#L... | click the button, both system themes |
+| S5-R7 | no console warnings; README + AI log | README.md, ai-log/etapa-05.md | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | link to the commit | commit history |
