@@ -66,27 +66,27 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S2-R3 | list, count, search, add, toggle, delete | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L76 | console output |
 | S2-R4 | add rejects empty name and invalid tag | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#74-L76 | last 2 console lines |
 | S2-R5 | original array unchanged after add | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/c086b4ee0d1632bb904315c6ad581968bc4442cb/rezervari.js#L1-L76 | console line |
-| S2-R6 | README Stage 2 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
+| S2-R6 | README Stage 2 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/README.md | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/ai-log/etapa-02.md | read |
 | S2-R7 | commit "Stage 2" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
 | S3-R1 | npm run dev starts without errors | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/package.json#L1-L27 | npm install, npm run dev |
 | S3-R2 | app name and counter computed from data | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/App.jsx#L15-L19 | edit data, save |
 | S3-R3 | data from README, not from the example | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/App.jsx#L3-L7 | compare with README |
 | S3-R4 | stage 1 styles reused | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/App.css#L1-L91 | look at the page |
 | S3-R5 | node_modules ignored, build passes | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/.gitignore#L1-L24 | npm run build |
-| S3-R6 | README Stage 3 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
+| S3-R6 | README Stage 3 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/README.md | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/ai-log/etapa-03.md | read |
 | S3-R7 | commit "Stage 3" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
 | S4-R1 | 2+ components in src/components/ | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/tree/main/frontend/src/components | open folder |
 | S4-R2 | card receives data through props | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/components/RezervareCard.jsx#L3 | read |
 | S4-R3 | map + key={id}, no console warnings | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/components/RezervareList.jsx#L10-L12 | F12,Console |
 | S4-R4 | message for empty list | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/components/RezervareList.jsx#L4-L6| set array to [] |
 | S4-R5 | state changes the card look | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/893e7d0d3e6377aa2133267053de506418bc2214/frontend/src/components/RezervareCard.jsx#L5 | toggle a done flag |
-| S4-R6 | README Stage 4 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | read |
+| S4-R6 | README Stage 4 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/main/README.md | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/ai-log/etapa-04.md | read |
 | S4-R7 | commit "Stage 4" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
-| S5-R1 | list kept in useState, in App | App.jsx#L... | read |
-| S5-R2 | toggling changes state and card look | App.jsx#L...<br>RezervareCard.jsx#L... | click a checkbox |
-| S5-R3 | delete removes the item | App.jsx#L...<br>RezervareCard.jsx#L... | click Delete |
-| S5-R4 | header counter derived, not in state | App.jsx#L... | toggle, watch header |
-| S5-R5 | immutable updates (no push, splice, assignment) | App.jsx#L... | read |
-| S5-R6 | light/dark toggle: state + data-theme on html | App.jsx#L...<br>App.css#L... | click the button, both system themes |
-| S5-R7 | no console warnings; README + AI log | README.md, ai-log/etapa-05.md | F12, Console |
-| S5-R8 | commit "Stage 5" pushed | link to the commit | commit history |
+| S5-R1 | list kept in useState, in App | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L1-L65 | read |
+| S5-R2 | toggling changes state and card look | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L19-L23 | click a checkbox |
+| S5-R3 | delete removes the item | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L25-L28 | click Delete |
+| S5-R4 | header counter derived, not in state | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L35 | toggle, watch header |
+| S5-R5 | immutable updates (no push, splice, assignment) | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L19-L28 | read |
+| S5-R6 | light/dark toggle: state + data-theme on html | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L29-L33 | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.css#L33-L156 | click the button, both system themes |
+| S5-R7 | no console warnings; README + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/README.md | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/ai-log/etapa-05.md | F12, Console |
+| S5-R8 | commit "Stage 5" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commit/e12c91a1e70ac4ae9c61eceeec150ac69e90b013 | commit history |

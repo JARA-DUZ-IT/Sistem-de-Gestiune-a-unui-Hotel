@@ -1,21 +1,18 @@
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 :root {
-  /* Baza întunecată profundă */
   --bg: #090a0f;
   --card: #12141c;
   --text: #e0e6ed;
   --muted: #6c7693;
-  
-  /* Accente Neon (Cyan vibe) */
   --accent: #00f3ff;
   --accent-soft: rgba(0, 243, 255, 0.15);
   --border: rgba(0, 243, 255, 0.3);
-  
-  /* Culori Neon radiante pentru tipurile de camere */
-  --c-single: #39ff14; /* Verde Neon */
-  --c-double: #ff00ea; /* Roz Neon */
-  --c-suite: #ffea00;  /* Galben Neon */
+  --c-single: #39ff14;
+  --c-double: #ff00ea;
+  --c-suite: #ffea00;
 }
 
 body {
@@ -26,7 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* Antetul - Efect de Text Glow */
 .app-header {
   background-color: var(--bg);
   color: var(--accent);
@@ -55,24 +51,13 @@ body {
   color: var(--text) !important;
 }
 
-/* Structura modificată pentru Etapa 3/4: doar panoul cu date */
 .container {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 16px;
-  display: block; 
-  /* flex-direction: row-reverse; - comentat temporar */
-  /* gap: 30px; */
-  /* align-items: flex-start; */
+  display: block;
 }
 
-/* Lățimile panourilor sunt comentate temporar; formularul revine in Etapa 7 */
-/*
-.container > .panel:nth-child(1) { flex: 1; }
-.container > .panel:nth-child(2) { flex: 1.8; }
-*/
-
-/* Panourile - Contur subtil luminos */
 .panel {
   background: var(--card);
   border: 1px solid var(--border);
@@ -92,7 +77,6 @@ body {
   padding-bottom: 10px;
 }
 
-/* Formular (Păstrat pentru etapele viitoare) */
 .item-form {
   display: flex;
   flex-direction: column;
@@ -107,7 +91,8 @@ body {
   color: var(--muted);
 }
 
-.item-form input, .item-form select {
+.item-form input,
+.item-form select {
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -118,7 +103,8 @@ body {
   transition: all 0.3s;
 }
 
-.item-form input:focus, .item-form select:focus {
+.item-form input:focus,
+.item-form select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 10px var(--accent-soft);
 }
@@ -144,7 +130,6 @@ body {
   box-shadow: 0 0 20px var(--accent) inset, 0 0 20px var(--accent);
 }
 
-/* Lista React */
 .rezervare-list {
   list-style: none;
   padding: 0;
@@ -154,7 +139,6 @@ body {
   gap: 16px;
 }
 
-/* Cardul unei rezervări React */
 .rezervare-card {
   display: flex;
   justify-content: space-between;
@@ -179,7 +163,6 @@ body {
   color: var(--text);
 }
 
-/* Etichetele (Badge-uri) cu Glow specific culorii */
 .badge {
   display: inline-block;
   padding: 4px 12px;
@@ -191,16 +174,18 @@ body {
   letter-spacing: 0.5px;
 }
 
-.badge-single { 
-  background-color: var(--c-single); 
+.badge-single {
+  background-color: var(--c-single);
   box-shadow: 0 0 10px var(--c-single);
 }
-.badge-double { 
-  background-color: var(--c-double); 
+
+.badge-double {
+  background-color: var(--c-double);
   box-shadow: 0 0 10px var(--c-double);
 }
-.badge-suite { 
-  background-color: var(--c-suite); 
+
+.badge-suite {
+  background-color: var(--c-suite);
   box-shadow: 0 0 10px var(--c-suite);
 }
 
@@ -210,7 +195,6 @@ body {
   font-style: italic;
 }
 
-/* Element finalizat (Check-in efectuat) */
 .rezervare-card.done {
   opacity: 0.5;
   border-color: #222;
@@ -221,7 +205,6 @@ body {
   color: var(--muted);
 }
 
-/* Mesaj listă goală */
 .empty {
   text-align: center;
   color: var(--muted);
@@ -229,12 +212,10 @@ body {
   padding: 20px 0;
 }
 
-/* Eliminarea outline-ului standard pentru focus vizibil */
 :focus-visible {
   outline: none;
 }
 
-/* Subsol (Păstrat pentru etapele viitoare) */
 .app-footer {
   text-align: center;
   padding: 30px;
@@ -243,11 +224,11 @@ body {
   letter-spacing: 1px;
 }
 
-/* Ecrane înguste */
 @media (max-width: 800px) {
   .container {
     flex-direction: column;
   }
+
   .container > .panel:nth-child(1),
   .container > .panel:nth-child(2) {
     width: 100%;
