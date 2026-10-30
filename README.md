@@ -84,7 +84,7 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S4-R7 | commit "Stage 4" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commits/main/ | commit history |
 | S5-R1 | list kept in useState, in App | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L1-L65 | read |
 | S5-R2 | toggling changes state and card look | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L19-L23 | click a checkbox |
-| S5-R3 | delete removes the item | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L25-L28 | click Delete |
+| S5-R3 | delete removes the item | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L25-L27 | click Delete |
 | S5-R4 | header counter derived, not in state | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L35 | toggle, watch header |
 | S5-R5 | immutable updates (no push, splice, assignment) | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L19-L28 | read |
 | S5-R6 | light/dark toggle: state + data-theme on html | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L29-L33 | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.css#L33-L156 | click the button, both system themes |
