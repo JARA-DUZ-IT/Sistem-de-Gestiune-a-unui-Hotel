@@ -1,0 +1,9 @@
+{
+  "rezervari": [
+    { "id": 1, "titlu": "Alice Smith - Cam. 101", "efectuat": false, "tip": "single" },
+    { "id": 2, "titlu": "Bob Johnson - Cam. 205", "efectuat": true, "tip": "double" },
+    { "id": 3, "titlu": "Charlie Brown - Cam. 301", "efectuat": false, "tip": "suite" },
+    { "id": 4, "titlu": "David Lee - Cam. 102", "efectuat": false, "tip": "single" },
+    { "id": 5, "titlu": "Emma Davis - Cam. 210", "efectuat": true, "tip": "double" }
+  ]
+}

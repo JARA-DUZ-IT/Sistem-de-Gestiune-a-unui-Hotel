@@ -1,20 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import RezervareList from "./components/RezervareList.jsx";
-
-const REZERVARI_INITIALE = [
-  { id: 1, titlu: "Alice Smith - Cam. 101", efectuat: false, tip: "single" },
-  { id: 2, titlu: "Bob Johnson - Cam. 205", efectuat: true, tip: "double" },
-  { id: 3, titlu: "Charlie Brown - Cam. 301", efectuat: false, tip: "suite" }
-];
+import { fetchRezervari } from "./api.js";
 
 function temaInitiala() {
   return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
 export default function App() {
-  const [rezervari, setRezervari] = useState(REZERVARI_INITIALE);
+  const [rezervari, setRezervari] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [tema, setTema] = useState(temaInitiala);
+
+  useEffect(() => {
+    let ignore = false;
+    async function load() {
+      try {
+        const data = await fetchRezervari();
+        if (!ignore) setRezervari(data);
+      } catch (err) {
+        if (!ignore) setError(err.message);
+      } finally {
+        if (!ignore) setLoading(false);
+      }
+    }
+    load();
+    return () => {
+      ignore = true;
+    };
+  }, []);
 
   function handleToggle(id) {
     setRezervari((prev) =>
@@ -53,11 +68,19 @@ export default function App() {
       <main className="container">
         <section className="panel">
           <h2>Lista rezervărilor</h2>
-          <RezervareList 
-            rezervari={rezervari} 
-            onToggle={handleToggle} 
-            onDelete={handleDelete} 
-          />
+          {loading && <p className="info">Se încarcă lista...</p>}
+          {error && (
+            <p className="error">
+              Nu am putut încărca datele: {error}. Rulează <code>npm run api</code>?
+            </p>
+          )}
+          {!loading && !error && (
+            <RezervareList 
+              rezervari={rezervari} 
+              onToggle={handleToggle} 
+              onDelete={handleDelete} 
+            />
+          )}
         </section>
       </main>
     </>
