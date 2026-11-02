@@ -34,7 +34,8 @@ Details per stage: see the ai-log/ folder.
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
-- [ ] Stage 6: loading data from a mock API
+- [x] Stage 6: data from a mock API
+- [ ] Stage 7: form and validation
 
 ## Stage 3: Vite and React project
 The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
@@ -44,11 +45,16 @@ The list is rendered from the data, through two components:
 - `RezervareList` receives the whole array and renders one card per item.
 - `RezervareCard` receives a single item through props and displays it.
 
+## Stage 6: data from a mock API
+The list is served by json-server from db.json. The app fetches it on load and shows a loading state and an error state.
+
 ## How to run
 cd frontend
 npm install
 npm run dev
 Then open the address printed in the terminal (http://localhost:5173).
+npm run api # terminal 1, http://localhost:3001
+npm run dev # terminal 2, http://localhost:5173
 
 ## Checklist
 | ID | Requirement | Where (permalink) | How to check |
@@ -90,3 +96,10 @@ Then open the address printed in the terminal (http://localhost:5173).
 | S5-R6 | light/dark toggle: state + data-theme on html | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.jsx#L29-L33 | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/frontend/src/App.css#L33-L156 | click the button, both system themes |
 | S5-R7 | no console warnings; README + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/README.md | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e12c91a1e70ac4ae9c61eceeec150ac69e90b013/ai-log/etapa-05.md | F12, Console |
 | S5-R8 | commit "Stage 5" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commit/e12c91a1e70ac4ae9c61eceeec150ac69e90b013 | commit history |
+| S6-R1 | npm run api starts, route shows JSON | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/package.json#L11, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/db.json#L1-L9 | open localhost:3001/rezervari |
+| S6-R2 | data no longer in React code | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/src/App.jsx#L11 | read |
+| S6-R3 | loading message while waiting |https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/src/App.jsx#L71 | --delay 4000 |
+| S6-R4 | error message when API is down | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/src/App.jsx#L72-L76 | stop npm run api, refresh |
+| S6-R5 | fetch only in api.js, URL from env | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/src/api.js#L1-L9, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/.env.example#L1 | search for fetch |
+| S6-R6 | README Stage 6 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/README.md, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/ai-log/etapa-06.md | read |
+| S6-R7 | commit "Stage 6" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commit/a4aaf48901aa29942d849bb0de0a4ebd8210659b| commit history |
