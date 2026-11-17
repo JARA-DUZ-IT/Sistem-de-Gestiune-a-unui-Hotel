@@ -17,7 +17,14 @@ Sample data used across all stages:
 3. Charlie Brown - Room 301, pending, Suite
 
 ## How to run
-Open `index.html` in a browser. No build step, no server.
+1. Install the dependencies:
+   ```bash
+   npm install
+2. Start the JSON Server backend:
+    npx json-server --watch db.json --port 3001
+3. Start the Vite development server in a separate terminal:
+    npm run dev
+4. Open the local URL displayed by Vite in your browser (usually http://localhost:5173).
 
 ## AI usage
 | Tool | Used for |
@@ -26,8 +33,8 @@ Open `index.html` in a browser. No build step, no server.
 | Gemini | Stage 2: Generating the JavaScript array, pure functions (map, filter, reduce), and console tests. |.
 | Gemini | Stage 3: Generating React component, adapting CSS for Vite, fixing PowerShell execution policies, and Vite setup. |
 | Gemini | Stage 4: Splitting the UI into React components, passing props, and conditional rendering based on state. |
-| Gemini | Stage 5: ??. |
-| Gemini | Stage 6: ???. |
+| Gemini | Stage 5: Implementing local component state with useState, immutable state updates using map and filter, event handling through props, controlled checkboxes, derived counters, and light/dark theme switching. |
+| Gemini | Stage 6: Setting up json-server and db.json, implementing API requests with fetch and async/await, loading data with useEffect, handling loading and error states, checking HTTP responses, and configuring the API URL through environment variables. |
 | ChatGPT | Stage 7: Implementing a controlled reservation form, input validation, CRUD operations through a shared API request function, server-side persistence, and automated testing attributes. |
 | ChatGPT | Stage 8: Implementing React Router navigation, a shared layout, reservation detail pages, error handling for missing reservations, CSS Modules, and component styling. |
 Details per stage: see the ai-log/ folder.
@@ -52,9 +59,10 @@ The list is rendered from the data, through two components:
 - `RezervareCard` receives a single item through props and displays it.
 
 ## Stage 5: components
+The application uses React state to manage reservation interactions, including updating check-in status, deleting reservations, and calculating derived values. Event handlers are passed through props, and users can switch between light and dark themes.
 
 ## Stage 6: data from a mock API
-The list is served by json-server from db.json. The app fetches it on load and shows a loading state and an error state.
+The reservation data is served by json-server from db.json. The application fetches reservations using useEffect and a centralized API module (api.js). It displays loading and error states while handling API responses and server availability.
 
 ## Stage 7: form and validation
 

@@ -1,4 +1,3 @@
-
 export const TIPURI_CAMERA = [
   { value: "single", label: "Single" },
   { value: "double", label: "Double" },

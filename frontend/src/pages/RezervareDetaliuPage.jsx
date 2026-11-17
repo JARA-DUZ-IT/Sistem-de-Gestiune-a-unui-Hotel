@@ -45,8 +45,6 @@ export default function RezervareDetaliuPage() {
     };
   }, [id]);
 
-  // Daca ID-ul rezultatului nu corespunde celui din URL,
-  // inseamna ca pagina inca incarca rezervarea curenta.
   if (rezultat.id !== id) {
     return (
       <p className="info" data-testid="loading">

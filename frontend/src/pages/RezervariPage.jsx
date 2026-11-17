@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import RezervareList from "../components/RezervareList.jsx";
 import RezervareForm from "../components/RezervareForm.jsx";
@@ -36,13 +35,11 @@ export default function RezervariPage() {
     };
   }, []);
 
-  // Adaugarea unei rezervari
   async function handleAdd(rezervare) {
     const creata = await createRezervare(rezervare);
     setRezervari((prev) => [...prev, creata]);
   }
 
-  // Modificarea starii unei rezervari
   async function handleToggle(id) {
     const rezervare = rezervari.find((r) => r.id === id);
 
@@ -61,7 +58,6 @@ export default function RezervariPage() {
     }
   }
 
-  // Stergerea unei rezervari
   async function handleDelete(id) {
     try {
       await deleteRezervare(id);
