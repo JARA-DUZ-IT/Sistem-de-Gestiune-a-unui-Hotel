@@ -1,0 +1,25 @@
+
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about h2 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+.about h3 {
+  margin-top: 28px;
+  color: var(--accent);
+}
+
+.about p,
+.about li {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.about ul {
+  padding-left: 24px;
+}

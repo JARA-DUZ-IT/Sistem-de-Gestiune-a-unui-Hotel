@@ -26,6 +26,10 @@ Open `index.html` in a browser. No build step, no server.
 | Gemini | Stage 2: Generating the JavaScript array, pure functions (map, filter, reduce), and console tests. |.
 | Gemini | Stage 3: Generating React component, adapting CSS for Vite, fixing PowerShell execution policies, and Vite setup. |
 | Gemini | Stage 4: Splitting the UI into React components, passing props, and conditional rendering based on state. |
+| Gemini | Stage 5: ??. |
+| Gemini | Stage 6: ???. |
+| ChatGPT | Stage 7: Implementing a controlled reservation form, input validation, CRUD operations through a shared API request function, server-side persistence, and automated testing attributes. |
+| ChatGPT | Stage 8: Implementing React Router navigation, a shared layout, reservation detail pages, error handling for missing reservations, CSS Modules, and component styling. |
 Details per stage: see the ai-log/ folder.
 
 ## Status
@@ -35,7 +39,9 @@ Details per stage: see the ai-log/ folder.
 - [x] Stage 4: components rendered from data
 - [x] Stage 5: local state and events
 - [x] Stage 6: data from a mock API
-- [ ] Stage 7: form and validation
+- [x] Stage 7: form and validation
+- [x] Stage 8: routing and component styling
+- [ ] Stage 9: custom backend with Express
 
 ## Stage 3: Vite and React project
 The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
@@ -45,8 +51,36 @@ The list is rendered from the data, through two components:
 - `RezervareList` receives the whole array and renders one card per item.
 - `RezervareCard` receives a single item through props and displays it.
 
+## Stage 5: components
+
 ## Stage 6: data from a mock API
 The list is served by json-server from db.json. The app fetches it on load and shows a loading state and an error state.
+
+## Stage 7: form and validation
+
+The application now supports full CRUD operations through a controlled reservation form and a mock REST API.
+
+The form validates user input before submission, prevents duplicate submissions, and displays errors without using browser alerts. Reservations are added to the list only after the server confirms successful creation.
+
+Updating the check-in status and deleting reservations are also handled through API requests. All changes persist after refreshing the page.
+
+The project includes a shared request function in `api.js`, a `tw.json` configuration file, and `data-testid` attributes for automated testing.
+
+## Stage 8: routing and component styling
+
+The application now uses React Router to support multiple pages without reloading the entire document.
+
+The available routes include:
+- `/` – the reservation list and creation form.
+- `/rezervari/:id` – the details of an individual reservation.
+- `/despre` – information about the HotelFlow application.
+- `*` – a custom 404 page for unknown routes.
+
+A shared layout contains the header, navigation, theme toggle, and footer. Reservation details are fetched individually from the API using the ID from the URL.
+
+Component-specific styles have been moved into CSS Modules, while `index.css` contains global variables and shared styles.
+
+The existing CRUD functionality and automated testing attributes from Stage 7 have been preserved.
 
 ## How to run
 cd frontend
@@ -103,3 +137,19 @@ npm run dev # terminal 2, http://localhost:5173
 | S6-R5 | fetch only in api.js, URL from env | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/src/api.js#L1-L9, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/frontend/.env.example#L1 | search for fetch |
 | S6-R6 | README Stage 6 section + AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/README.md, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/a4aaf48901aa29942d849bb0de0a4ebd8210659b/ai-log/etapa-06.md | read |
 | S6-R7 | commit "Stage 6" pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commit/a4aaf48901aa29942d849bb0de0a4ebd8210659b| commit history |
+| S7-R1 | Controlled form: value and onChange on every field | TODO | Read |
+| S7-R2 | Empty title shows an error; no request is sent | TODO | Submit empty, watch Network |
+| S7-R3 | Added reservation appears in the list and survives refresh | TODO | Add, refresh |
+| S7-R4 | Toggle and delete survive refresh | TODO | Toggle/delete, refresh |
+| S7-R5 | Button disabled while sending; form cleared only on success | TODO | Delayed API; stop API and submit |
+| S7-R6 | tw.json and required data-testid attributes | TODO | Console queries |
+| S7-R7 | README Stage 7 section and AI log | TODO | Read |
+| S7-R8 | Stage 7 commit pushed | TODO | Commit history |
+| S8-R1 | Header navigation changes page without reload | TODO | Click links, watch Network |
+| S8-R2 | Clicking a reservation opens its detail page | TODO | Click a reservation title |
+| S8-R3 | Refresh on detail URL works; missing ID shows an error | TODO | Refresh /rezervari/1, open /rezervari/999 |
+| S8-R4 | Unknown URL shows the application 404 page | TODO | Open /ceva |
+| S8-R5 | Components use CSS Modules; index.css contains shared styles | TODO | Inspect source files |
+| S8-R6 | Required data-testid attributes and detail route /<resource>/:id | TODO | Console queries |
+| S8-R7 | README Stage 8 section and AI log | TODO | Read |
+| S8-R8 | Stage 8 commit pushed | TODO | Commit history |

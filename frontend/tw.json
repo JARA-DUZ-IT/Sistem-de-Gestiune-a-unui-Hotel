@@ -1,0 +1,8 @@
+{
+  "resource": "rezervari",
+  "title": "titlu",
+  "done": "efectuat",
+  "sample": {
+    "tip": "suite"
+  }
+}

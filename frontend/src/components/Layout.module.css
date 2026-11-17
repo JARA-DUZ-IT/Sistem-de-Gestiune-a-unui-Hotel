@@ -1,0 +1,88 @@
+.header {
+  position: relative;
+  background-color: var(--bg);
+  color: var(--accent);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(0, 243, 255, 0.08);
+}
+
+.inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 30px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.link {
+  color: var(--accent);
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  opacity: 0.85;
+}
+
+.link:hover {
+  opacity: 1;
+  background: var(--accent-soft);
+}
+
+.active {
+  opacity: 1;
+  background: var(--accent-soft);
+  font-weight: 700;
+}
+
+.themeToggle {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.themeToggle:hover {
+  background: var(--accent-soft);
+}
+
+.main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 16px;
+  min-height: 60vh;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 24px 16px;
+}

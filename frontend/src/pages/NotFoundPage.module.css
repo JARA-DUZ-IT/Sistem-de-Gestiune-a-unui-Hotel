@@ -1,0 +1,26 @@
+
+.notFound {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.notFound h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 4rem;
+}
+
+.notFound p {
+  color: var(--muted);
+  margin: 12px 0 24px;
+}
+
+.notFound a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.notFound a:hover {
+  text-decoration: underline;
+}
