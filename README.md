@@ -21,8 +21,10 @@ Sample data used across all stages:
    ```bash
    npm install
 2. Start the JSON Server backend:
+    ```bash
     npx json-server --watch db.json --port 3001
 3. Start the Vite development server in a separate terminal:
+    ```bash
     npm run dev
 4. Open the local URL displayed by Vite in your browser (usually http://localhost:5173).
 
@@ -37,7 +39,7 @@ Sample data used across all stages:
 | Gemini | Stage 6: Setting up json-server and db.json, implementing API requests with fetch and async/await, loading data with useEffect, handling loading and error states, checking HTTP responses, and configuring the API URL through environment variables. |
 | ChatGPT | Stage 7: Implementing a controlled reservation form, input validation, CRUD operations through a shared API request function, server-side persistence, and automated testing attributes. |
 | ChatGPT | Stage 8: Implementing React Router navigation, a shared layout, reservation detail pages, error handling for missing reservations, CSS Modules, and component styling. |
-Details per stage: see the ai-log/ folder.
+| Details per stage: see the ai-log/ folder. | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/tree/main/ai-log |
 
 ## Status
 - [x] Stage 1: static mockup
