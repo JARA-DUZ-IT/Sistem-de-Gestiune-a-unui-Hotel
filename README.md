@@ -17,16 +17,16 @@ Sample data used across all stages:
 3. Charlie Brown - Room 301, pending, Suite
 
 ## How to run
-1. Install the dependencies:
+1. Start the Express backend (terminal 1, port 3001):
    ```bash
+   cd backend
    npm install
-2. Start the JSON Server backend:
-    ```bash
-    npx json-server --watch db.json --port 3001
-3. Start the Vite development server in a separate terminal:
-    ```bash
+   npm run dev
+2. Start the Vite frontend (terminal 2, port 5173):
+    cd frontend
+    npm install
     npm run dev
-4. Open the local URL displayed by Vite in your browser (usually http://localhost:5173).
+3. Open the local URL displayed by Vite in your browser (http://localhost:5173).
 
 ## AI usage
 | Tool | Used for |
@@ -40,6 +40,7 @@ Sample data used across all stages:
 | ChatGPT | Stage 7: Implementing a controlled reservation form, input validation, CRUD operations through a shared API request function, server-side persistence, and automated testing attributes. |
 | ChatGPT | Stage 8: Implementing React Router navigation, a shared layout, reservation detail pages, error handling for missing reservations, CSS Modules, and component styling. |
 | Details per stage: see the ai-log/ folder. | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/tree/main/ai-log |
+| Gemini | Stage 9: Building a custom Node.js and Express backend with REST routes (/rezervari), server-side whitelist validation, HTTP status codes, CORS configuration, centralized error handling, and removing json-server. |
 
 ## Status
 - [x] Stage 1: static mockup
@@ -50,7 +51,8 @@ Sample data used across all stages:
 - [x] Stage 6: data from a mock API
 - [x] Stage 7: form and validation
 - [x] Stage 8: routing and component styling
-- [ ] Stage 9: custom backend with Express
+- [x] Stage 9: custom backend with Express
+- [ ] Stage 10: MariaDB and full CRUD
 
 ## Stage 3: Vite and React project
 The app now lives in frontend/, built with Vite. The data from stage 2 moved into the main component; the list is still printed raw.
@@ -92,13 +94,20 @@ Component-specific styles have been moved into CSS Modules, while `index.css` co
 
 The existing CRUD functionality and automated testing attributes from Stage 7 have been preserved.
 
-## How to run
-cd frontend
-npm install
-npm run dev
-Then open the address printed in the terminal (http://localhost:5173).
-npm run api # terminal 1, http://localhost:3001
-npm run dev # terminal 2, http://localhost:5173
+## Stage 9: custom backend with Express
+
+`json-server` has been completely removed from the project. The API is now a custom Node.js and Express 5 server located in `backend/`, exposing full REST routes under `/rezervari` (`GET`, `POST`, `PATCH`, `DELETE`), server-side input validation with a field whitelist, proper HTTP status codes (`200`, `201`, `204`, `400`, `404`, `500`), CORS support for `http://localhost:5173`, and centralized error handling.
+
+Data is currently stored in memory and resets when the server restarts (it will be migrated to MariaDB in Stage 10). On the frontend, `api.js` was updated to read and display `{ error: "..." }` messages returned by the server.
+
+### Testing the API with `curl`
+```bash
+curl -s -w ' -> %{http_code}\n' http://localhost:3001/rezervari
+curl -s -w ' -> %{http_code}\n' -X POST http://localhost:3001/rezervari -H "Content-Type: application/json" -d '{"titlu":"Din curl","tip":"suite"}'
+curl -s -w ' -> %{http_code}\n' -X POST http://localhost:3001/rezervari -H "Content-Type: application/json" -d '{"titlu":""}'
+curl -s -w ' -> %{http_code}\n' -X PATCH http://localhost:3001/rezervari/4 -H "Content-Type: application/json" -d '{"efectuat":true}'
+curl -s -w ' -> %{http_code}\n' http://localhost:3001/rezervari/999
+curl -s -w ' -> %{http_code}\n' -X DELETE http://localhost:3001/rezervari/4
 
 ## Checklist
 | ID | Requirement | Where (permalink) | How to check |
@@ -163,3 +172,10 @@ npm run dev # terminal 2, http://localhost:5173
 | S8-R6 | Required data-testid attributes and detail route /<resource>/:id | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e68dd86a375821e7924828ad116d3a78c91f1056/frontend/src/App.jsx#L9-L24, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e68dd86a375821e7924828ad116d3a78c91f1056/frontend/src/components/Layout.jsx#L45-L57, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e68dd86a375821e7924828ad116d3a78c91f1056/frontend/src/pages/RezervareDetaliuPage.jsx#L40-L68 | Console queries |
 | S8-R7 | README Stage 8 section and AI log | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e68dd86a375821e7924828ad116d3a78c91f1056/README.md, https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/blob/e68dd86a375821e7924828ad116d3a78c91f1056/ai-log/etapa-08.md | Read |
 | S8-R8 | Stage 8 commit pushed | https://github.com/JARA-DUZ-IT/Sistem-de-Gestiune-a-unui-Hotel/commit/e68dd86a375821e7924828ad116d3a78c91f1056 | Commit history |
+| S9-R1 | `npm run dev` in `backend/` starts the API on 3001 | `backend/package.json`, `backend/src/server.js` | Run it, open `/health` |
+| S9-R2 | All five routes answer with the right codes | `backend/src/routes/rezervari.js#L..-L..` | `curl` commands from README |
+| S9-R3 | Invalid data returns 400 with a clear message | `backend/src/validation.js#L..-L..` | `POST` with empty `titlu` |
+| S9-R4 | React app works with `json-server` removed | `frontend/package.json`, `frontend/src/api.js#L..` | Stop everything except backend |
+| S9-R5 | No CORS errors in the browser console | `backend/src/app.js#L..` | Open browser console |
+| S9-R6 | README Stage 9 section + AI log | `README.md`, `ai-log/etapa-09.md` | Read |
+| S9-R7 | Commit "Stage 9" pushed | Link to the commit | Commit history |

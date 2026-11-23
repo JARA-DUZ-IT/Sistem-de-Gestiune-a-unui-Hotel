@@ -23,6 +23,21 @@
       "tip": "single",
       "efectuat": false,
       "id": 8
+    },
+    {
+      "titlu": "Jara",
+      "tip": "double",
+      "efectuat": true,
+      "id": 9
+    },
+    {
+      "titlu": "Din curl",
+      "tip": "suite",
+      "id": 10
+    },
+    {
+      "titlu": "",
+      "id": 11
     }
   ]
 }
